@@ -52,7 +52,7 @@ class Affine:
         self.x = x
         
         # TODO 2: x @ W + b 를 계산해 반환하세요. b는 broadcasting으로 모든 행에 더해집니다.
-        return x @ self.W + self.b
+        return x @ self.W + self.b  ## matrix multiplication으로 weighted sum 구하고 bias 더하기
 
 
 

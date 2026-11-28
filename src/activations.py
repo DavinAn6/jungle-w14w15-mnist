@@ -34,16 +34,13 @@ class ReLU:
         주의: 입력 배열 x를 직접 수정하지 마세요. 복사한 배열을 수정해 반환합니다.
         """
         # TODO 1: x <= 0 인 위치를 self.mask에 저장하세요. (backward에서 사용합니다)
-        self.mask = (x<=0)
+        self.mask = (x<=0)  ## True, False로만 이루어진 Matrix 생성
         
         # TODO 2: x를 복사한 뒤 mask 위치를 0으로 만들어 반환하세요.
-        y = x.copy()
-        y[self.mask] = 0
+        y = x.copy()        ## x matrix 복사
+        y[self.mask] = 0    ## mask matrix에서 true였던 element만 0으로 
         return y
-
-
-
-
+    
 
     def backward(self, dout):
         """
